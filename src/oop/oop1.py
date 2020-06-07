@@ -20,15 +20,15 @@
 
 class Vehicle:
     pass 
-# base class of GroundVehicle, Car, and Motorcycle
-
-class FlightVehicle:
-    pass
-# base class if Airplane
-
-class Starship:
-    pass
 # base class
+
+class FlightVehicle(Vehicle):
+    pass
+# inherits from Vehicle - child of Vehicle
+
+class Starship(FlightVehicle):
+    pass
+# inherits from FlighVehicle, indirectly inherits from Vehicle - child of FlighVehicle, grandchild of Vehicle
 
 class GroundVehicle(Vehicle):
     pass
@@ -44,4 +44,4 @@ class Motorcycle(GroundVehicle):
 
 class Airplane(FlightVehicle):
     pass
-# inherits from FlightVehicle 
+# inherits from FlightVehicle, indirectly inherits from Vehicle - child of FlightVehicle, grandchild of Vehicle
